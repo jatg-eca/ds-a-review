@@ -6,13 +6,24 @@ public class MainLL {
 		// TODO Auto-generated method stub
 		
 		LinkedList myLinkedList;
-		myLinkedList = new LinkedList(2);
+		myLinkedList = new LinkedList();
 		
+		myLinkedList.removeLast();
+		
+//		myLinkedList.getHead();
+//		myLinkedList.getTail();
+//		myLinkedList.getLength();
+		
+		
+		myLinkedList.printList();
+		myLinkedList.append(11);
 		myLinkedList.getHead();
 		myLinkedList.getTail();
 		myLinkedList.getLength();
-		
 		myLinkedList.printList();
+		
+		myLinkedList.removeLast();
+		
 		
 		myLinkedList.append(5);
 		myLinkedList.getHead();
@@ -32,6 +43,29 @@ public class MainLL {
 		myLinkedList.getLength();
 		myLinkedList.printList();
 		
+		//Remove
+		myLinkedList.removeLast();
+		myLinkedList.printList();
+		myLinkedList.getTail();
+		myLinkedList.getHead();
+		
+		myLinkedList.removeLast();
+		myLinkedList.printList();
+		myLinkedList.getTail();
+		myLinkedList.getHead();
+		
+		myLinkedList.printList();
+		
+		myLinkedList.removeLast();
+		myLinkedList.printList();
+		myLinkedList.getTail();
+		myLinkedList.getHead();
+		myLinkedList.getLength();
+		
+		
+		
+		
+
 
 	}
 
