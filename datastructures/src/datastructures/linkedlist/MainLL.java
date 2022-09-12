@@ -8,59 +8,67 @@ public class MainLL {
 		LinkedList myLinkedList;
 		myLinkedList = new LinkedList();
 		
-		myLinkedList.removeLast();
-		
+//		myLinkedList.removeLast();
+//		
+////		myLinkedList.getHead();
+////		myLinkedList.getTail();
+////		myLinkedList.getLength();
+//		
+//		
+//		myLinkedList.printList();
+//		myLinkedList.append(11);
 //		myLinkedList.getHead();
 //		myLinkedList.getTail();
 //		myLinkedList.getLength();
+//		myLinkedList.printList();
+//		
+//		myLinkedList.removeLast();
+//		
+//		
+//		myLinkedList.append(5);
+//		myLinkedList.getHead();
+//		myLinkedList.getTail();
+//		myLinkedList.getLength();
+//		myLinkedList.printList();
+//		
+//		myLinkedList.append(30);
+//		myLinkedList.getHead();
+//		myLinkedList.getTail();
+//		myLinkedList.getLength();
+//		myLinkedList.printList();
+//		
+//		myLinkedList.append(54);
+//		myLinkedList.getHead();
+//		myLinkedList.getTail();
+//		myLinkedList.getLength();
+//		myLinkedList.printList();
+//		
+//		//Remove
+//		myLinkedList.removeLast();
+//		myLinkedList.printList();
+//		myLinkedList.getTail();
+//		myLinkedList.getHead();
+//		
+//		myLinkedList.removeLast();
+//		myLinkedList.printList();
+//		myLinkedList.getTail();
+//		myLinkedList.getHead();
+//		
+//		myLinkedList.printList();
+//		
+//		myLinkedList.removeLast();
+//		myLinkedList.printList();
+//		myLinkedList.getTail();
+//		myLinkedList.getHead();
+//		myLinkedList.getLength();
 		
+		myLinkedList.append(1);
+		myLinkedList.append(2);
 		
-		myLinkedList.printList();
-		myLinkedList.append(11);
-		myLinkedList.getHead();
-		myLinkedList.getTail();
-		myLinkedList.getLength();
-		myLinkedList.printList();
-		
-		myLinkedList.removeLast();
-		
-		
-		myLinkedList.append(5);
-		myLinkedList.getHead();
-		myLinkedList.getTail();
-		myLinkedList.getLength();
-		myLinkedList.printList();
-		
-		myLinkedList.append(30);
-		myLinkedList.getHead();
-		myLinkedList.getTail();
-		myLinkedList.getLength();
-		myLinkedList.printList();
-		
-		myLinkedList.append(54);
-		myLinkedList.getHead();
-		myLinkedList.getTail();
-		myLinkedList.getLength();
-		myLinkedList.printList();
-		
-		//Remove
-		myLinkedList.removeLast();
-		myLinkedList.printList();
-		myLinkedList.getTail();
-		myLinkedList.getHead();
-		
-		myLinkedList.removeLast();
-		myLinkedList.printList();
-		myLinkedList.getTail();
-		myLinkedList.getHead();
-		
-		myLinkedList.printList();
-		
-		myLinkedList.removeLast();
-		myLinkedList.printList();
-		myLinkedList.getTail();
-		myLinkedList.getHead();
-		myLinkedList.getLength();
+		System.out.println(myLinkedList.removeLast().value);
+		System.out.println(myLinkedList.removeLast().value);
+		System.out.println(myLinkedList.removeLast());
+		System.out.println(myLinkedList.removeLast());
 		
 		
 		

@@ -6,7 +6,7 @@ public class LinkedList {
 	private int length;
 	
 	//Inner class - nested class
-	private class Node{
+	class Node{
 		int value;
 		Node next;
 		
@@ -78,7 +78,27 @@ public class LinkedList {
 		}
 	}
 	
-	public void removeLast() {
+	public Node removeLast() {
+		if(this.length == 0) { 
+			return null;
+		}
+		Node temp = this.head;
+		Node pre = this.head;		
+		while(temp.next != null) {
+			pre = temp;
+			temp = temp.next;
+		}
+		this.tail = pre;
+		this.tail.next = null;
+		length --;
+		if(length == 0) {
+			head = null;
+			tail = null;
+		}
+		return temp;
+	}
+	
+	public void removeLastJATG() {
 		Node temp = head;
 		Node penultimo = null;
 		int numEsperado = this.length - 1;
@@ -103,12 +123,17 @@ public class LinkedList {
 			else {
 			int removedLast = this.tail.value;
 			while(temp != null) {
+				penultimo = temp;
 				temp = temp.next;
 				recorrido +=1;
-			if(recorrido == numEsperado) {
-				penultimo = temp;
-				break;
-			}
+				
+//			if(recorrido == numEsperado) {
+//				penultimo = temp;
+//				break;
+//			}
+				if (temp.next == null) {
+					break;
+				}
 		}
 			this.tail = penultimo;
 			this.tail.next = null;
