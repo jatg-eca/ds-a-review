@@ -88,7 +88,7 @@ public class MainLL {
 //		myLinkedListPrepended.printList();
 //		System.out.println(myLinkedListPrepended.removeFirst());
 		
-		System.out.println(myLinkedListPrepended.get(10).value);
+		System.out.println(myLinkedListPrepended.get(10));
 
 		
 		

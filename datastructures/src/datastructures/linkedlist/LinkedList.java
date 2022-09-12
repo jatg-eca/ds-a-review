@@ -179,18 +179,30 @@ public class LinkedList {
 		return temp;
 	}
 	
-	public Node get(int index) {
+	public Node getJATG(int index) {
 		Node temp = this.head;
 		int i = 1;
 		while(temp.next != null) {
 			if (i == index) {
 				break;
 			}
-			else if (index < i || index > this.length) {
+			else if (index < 0 || index >= this.length) {
 				System.out.println("Catch: Ese índice no existe");
+				return null;
 			}
 			temp = temp.next;
 			i++;
+		}
+		return temp;
+	}
+	
+	public Node get(int index) {
+		if(index < 0 || index >= length) {
+			return null;
+		}
+		Node temp = head;
+		for(int i=0; i<index; i++) {
+			temp = temp.next;
 		}
 		return temp;
 	}
