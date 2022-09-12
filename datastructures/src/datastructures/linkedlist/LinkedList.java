@@ -207,7 +207,7 @@ public class LinkedList {
 		return temp;
 	}
 	
-	public boolean set(int index, int value) {
+	public boolean setJATG(int index, int value) {
 		if(index<0 || index >= this.length) {
 			System.out.println("No se cambió número: Ese índice no está en la lista");
 			return false;
@@ -220,6 +220,15 @@ public class LinkedList {
 		temp.value = value;
 		System.out.println("Cambiado el valor de " + temp + " de " + oldValue + " a " + temp.value);
 		return true;
+	}
+	
+	public boolean set(int index, int value) {
+		Node temp = get(index);
+		if(temp != null) {
+			temp.value = value;
+			return true;
+		}
+		return false;
 	}
 
 }
