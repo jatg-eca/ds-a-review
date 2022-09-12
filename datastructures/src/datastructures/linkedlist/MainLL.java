@@ -71,6 +71,10 @@ public class MainLL {
 		System.out.println(myLinkedList.removeLast());
 		
 		
+		LinkedList myLinkedListPrepended = new LinkedList();
+		myLinkedListPrepended.prepend(5);
+		myLinkedListPrepended.printList();
+		myLinkedListPrepended.prepend(8);
 		
 		
 

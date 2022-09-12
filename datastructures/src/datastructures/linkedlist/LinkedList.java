@@ -144,5 +144,18 @@ public class LinkedList {
 		
 	}
 	
+	public void prepend(int value) {
+		Node newHeadNode = new Node(value);
+		if(this.head == null) {
+			this.head = newHeadNode;
+			this.tail = newHeadNode;
+			this.tail.next = null;
+		}else {
+		Node temp = this.head;
+		this.head = newHeadNode;
+		this.head.next = temp;
+		}
+	}
+	
 
 }
