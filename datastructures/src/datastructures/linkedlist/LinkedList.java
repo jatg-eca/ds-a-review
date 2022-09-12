@@ -163,17 +163,36 @@ public class LinkedList {
 	
 	public Node removeFirst() {
 		if(length == 0) return null;
-		Node removed = this.head;
-		Node newHead = this.head.next;
-		this.head = newHead;
+		Node temp = this.head;
+		//Node newHead = this.head.next;
+		this.head = head.next;
+		//
+		temp.next = null;
+		//
 		this.length --;
 		if (length == 0) {
-			this.head = null;
+			//this.head = null;
 			this.tail = null;
-			return removed;
+			//return temp;
 		}
-		this.head.next = newHead.next;
-		return removed;
+		//this.head.next = newHead.next;
+		return temp;
+	}
+	
+	public Node get(int index) {
+		Node temp = this.head;
+		int i = 1;
+		while(temp.next != null) {
+			if (i == index) {
+				break;
+			}
+			else if (index < i || index > this.length) {
+				System.out.println("Catch: Ese índice no existe");
+			}
+			temp = temp.next;
+			i++;
+		}
+		return temp;
 	}
 
 }

@@ -62,13 +62,13 @@ public class MainLL {
 //		myLinkedList.getHead();
 //		myLinkedList.getLength();
 		
-		myLinkedList.append(1);
-		myLinkedList.append(2);
-		
-		System.out.println(myLinkedList.removeLast().value);
-		System.out.println(myLinkedList.removeLast().value);
-		System.out.println(myLinkedList.removeLast());
-		System.out.println(myLinkedList.removeLast());
+//		myLinkedList.append(1);
+//		myLinkedList.append(2);
+//		
+//		System.out.println(myLinkedList.removeLast().value);
+//		System.out.println(myLinkedList.removeLast().value);
+//		System.out.println(myLinkedList.removeLast());
+//		System.out.println(myLinkedList.removeLast());
 		
 		
 		LinkedList myLinkedListPrepended = new LinkedList(2);
@@ -76,12 +76,23 @@ public class MainLL {
 		//myLinkedListPrepended.printList();
 		myLinkedListPrepended.prepend(1);
 		myLinkedListPrepended.printList();
-		System.out.println(myLinkedListPrepended.removeFirst().value);
-		myLinkedListPrepended.getLength();
-		System.out.println(myLinkedListPrepended.removeFirst().value);
-		myLinkedListPrepended.getLength();
-		System.out.println(myLinkedListPrepended.removeFirst().value);
 		
+//		System.out.println(myLinkedListPrepended.removeFirst().value);
+//		System.out.println("LISTA");
+//		myLinkedListPrepended.printList();
+//		myLinkedListPrepended.getLength();
+//		System.out.println(myLinkedListPrepended.removeFirst().value);
+//		myLinkedListPrepended.getLength();
+//		System.out.println(myLinkedListPrepended.removeFirst().value);
+//		System.out.println("LISTA");
+//		myLinkedListPrepended.printList();
+//		System.out.println(myLinkedListPrepended.removeFirst());
+		
+		System.out.println(myLinkedListPrepended.get(10).value);
+
+		
+		
+
 
 
 	}
