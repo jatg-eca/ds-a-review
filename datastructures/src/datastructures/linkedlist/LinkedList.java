@@ -58,6 +58,7 @@ public class LinkedList {
 		}
 		else {
 			this.tail.next = appendedNode;
+			this.tail = appendedNode;
 			appendedNode.next = null;
 			this.length += 1;
 		}
