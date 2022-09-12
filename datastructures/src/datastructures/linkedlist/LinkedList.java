@@ -154,8 +154,26 @@ public class LinkedList {
 		Node temp = this.head;
 		this.head = newHeadNode;
 		this.head.next = temp;
+		
+		//newHeadNode.next = this.head;
+		//this.head = newHeadNode;
 		}
+		length++;
 	}
 	
+	public Node removeFirst() {
+		if(length == 0) return null;
+		Node removed = this.head;
+		Node newHead = this.head.next;
+		this.head = newHead;
+		this.length --;
+		if (length == 0) {
+			this.head = null;
+			this.tail = null;
+			return removed;
+		}
+		this.head.next = newHead.next;
+		return removed;
+	}
 
 }
