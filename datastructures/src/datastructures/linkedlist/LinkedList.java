@@ -50,10 +50,12 @@ public class LinkedList {
 		if(this.length < 1) {
 			this.head = appendedNode;
 			this.tail = appendedNode;
+			this.tail.next = null;
 		}
 		else if(this.length == 1) {
 			this.head.next = appendedNode;
 			this.tail = appendedNode;
+			this.tail.next = null;
 			this.length += 1;
 		}
 		else {

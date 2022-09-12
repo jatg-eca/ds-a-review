@@ -26,6 +26,12 @@ public class MainLL {
 		myLinkedList.getLength();
 		myLinkedList.printList();
 		
+		myLinkedList.append(54);
+		myLinkedList.getHead();
+		myLinkedList.getTail();
+		myLinkedList.getLength();
+		myLinkedList.printList();
+		
 
 	}
 
