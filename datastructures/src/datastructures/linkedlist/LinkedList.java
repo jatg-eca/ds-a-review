@@ -206,5 +206,20 @@ public class LinkedList {
 		}
 		return temp;
 	}
+	
+	public boolean set(int index, int value) {
+		if(index<0 || index >= this.length) {
+			System.out.println("No se cambió número: Ese índice no está en la lista");
+			return false;
+		}
+		Node temp = this.head;
+		for(int i=0; i<index; i++) {
+			temp = temp.next;
+		}
+		int oldValue = temp.value;
+		temp.value = value;
+		System.out.println("Cambiado el valor de " + temp + " de " + oldValue + " a " + temp.value);
+		return true;
+	}
 
 }

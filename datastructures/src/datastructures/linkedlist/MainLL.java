@@ -5,8 +5,8 @@ public class MainLL {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		LinkedList myLinkedList;
-		myLinkedList = new LinkedList();
+//		LinkedList myLinkedList;
+//		myLinkedList = new LinkedList();
 		
 //		myLinkedList.removeLast();
 //		
@@ -71,11 +71,11 @@ public class MainLL {
 //		System.out.println(myLinkedList.removeLast());
 		
 		
-		LinkedList myLinkedListPrepended = new LinkedList(2);
-		myLinkedListPrepended.append(3);
-		//myLinkedListPrepended.printList();
-		myLinkedListPrepended.prepend(1);
-		myLinkedListPrepended.printList();
+//		LinkedList myLinkedListPrepended = new LinkedList(2);
+//		myLinkedListPrepended.append(3);
+//		//myLinkedListPrepended.printList();
+//		myLinkedListPrepended.prepend(1);
+//		myLinkedListPrepended.printList();
 		
 //		System.out.println(myLinkedListPrepended.removeFirst().value);
 //		System.out.println("LISTA");
@@ -88,9 +88,20 @@ public class MainLL {
 //		myLinkedListPrepended.printList();
 //		System.out.println(myLinkedListPrepended.removeFirst());
 		
-		System.out.println(myLinkedListPrepended.get(10));
-
+//		System.out.println(myLinkedListPrepended.get(0).value);
 		
+		LinkedList myLinkedList = new LinkedList(0);
+		System.out.println(myLinkedList.get(3) + "\n");
+		
+		
+		myLinkedList.append(1);
+		myLinkedList.append(2);
+		myLinkedList.append(3);
+		
+		myLinkedList.printList();
+
+		System.out.println(myLinkedList.set(0,10));
+		myLinkedList.printList();
 		
 
 
