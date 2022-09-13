@@ -100,9 +100,11 @@ public class MainLL {
 		
 		myLinkedList.printList();
 
-		System.out.println(myLinkedList.set(0,10));
-		myLinkedList.printList();
+		//System.out.println(myLinkedList.set(0,10));
+		//myLinkedList.printList();
 		
+		System.out.println(myLinkedList.insert(2, 5));
+		myLinkedList.printList();
 
 
 

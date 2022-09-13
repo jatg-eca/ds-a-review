@@ -230,5 +230,17 @@ public class LinkedList {
 		}
 		return false;
 	}
+	
+	public boolean insert(int index, int value) {
+		if(index < 0 || index>this.length) {
+			return false;
+		}
+		Node temp = get(index);
+		Node pre = get(index -1);
+		Node newNode = new Node(value);
+		pre.next = newNode;
+		newNode.next = temp;
+		return true;
+	}
 
 }
