@@ -91,31 +91,50 @@ public class MainLL {
 //		System.out.println(myLinkedListPrepended.get(0).value);
 		
 		LinkedList myLinkedList = new LinkedList(0);
-		System.out.println(myLinkedList.get(3) + "\n");
-		
+//		System.out.println(myLinkedList.get(3) + "\n");
+//		
+//		
+//		myLinkedList.append(1);
+//		myLinkedList.append(2);
+//		myLinkedList.append(3);
+//		
+//		myLinkedList.printList();
+//
+//		//System.out.println(myLinkedList.set(0,10));
+//		//myLinkedList.printList();
+//		
+//		System.out.println("OkOK " + myLinkedList.get(3).value);
+//		
+//		System.out.println(myLinkedList.insert(2, 5));
+//		System.out.println("OkOK " + myLinkedList.get(3).value);
+//		System.out.println("OkOK " + myLinkedList.get(4).value);
+//		System.out.println(myLinkedList.insert(0, 16));
+//		System.out.println(myLinkedList.insert(6, 22));
+//		System.out.println(myLinkedList.insert(10, 54));
+//		myLinkedList.printList();
+//		
+//		
+//
+//
+//
+//		
+//		myLinkedList.printList();
 		
 		myLinkedList.append(1);
 		myLinkedList.append(2);
 		myLinkedList.append(3);
-		
+		myLinkedList.append(4);
 		myLinkedList.printList();
-
-		//System.out.println(myLinkedList.set(0,10));
-		//myLinkedList.printList();
+		System.out.println("\n");
 		
-		System.out.println("OkOK " + myLinkedList.get(3).value);
-		
-		System.out.println(myLinkedList.insert(2, 5));
-		System.out.println("OkOK " + myLinkedList.get(3).value);
-		System.out.println("OkOK " + myLinkedList.get(4).value);
-		System.out.println(myLinkedList.insert(0, 16));
-		System.out.println(myLinkedList.insert(6, 22));
-		System.out.println(myLinkedList.insert(10, 54));
+		System.out.println("\nSe borró: " + myLinkedList.remove(1).value + "\n");
 		myLinkedList.printList();
-
-
-
 		
+		System.out.println("\nSe borró: " + myLinkedList.remove(3).value + "\n");
+		myLinkedList.printList();
+		
+		System.out.println(myLinkedList.remove(-16));
+		System.out.println(myLinkedList.remove(133));
 		myLinkedList.printList();
 
 
