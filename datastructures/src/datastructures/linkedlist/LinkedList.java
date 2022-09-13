@@ -240,6 +240,7 @@ public class LinkedList {
 		Node newNode = new Node(value);
 		pre.next = newNode;
 		newNode.next = temp;
+		this.length ++;
 		return true;
 	}
 
