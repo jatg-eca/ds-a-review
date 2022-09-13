@@ -103,7 +103,19 @@ public class MainLL {
 		//System.out.println(myLinkedList.set(0,10));
 		//myLinkedList.printList();
 		
+		System.out.println("OkOK " + myLinkedList.get(3).value);
+		
 		System.out.println(myLinkedList.insert(2, 5));
+		System.out.println("OkOK " + myLinkedList.get(3).value);
+		System.out.println("OkOK " + myLinkedList.get(4).value);
+		System.out.println(myLinkedList.insert(0, 16));
+		System.out.println(myLinkedList.insert(6, 22));
+		System.out.println(myLinkedList.insert(10, 54));
+		myLinkedList.printList();
+
+
+
+		
 		myLinkedList.printList();
 
 

@@ -235,6 +235,14 @@ public class LinkedList {
 		if(index < 0 || index>this.length) {
 			return false;
 		}
+		if(index == 0) {
+			prepend(value);
+			return true;
+		}
+		if(index == length) {
+			append(value);
+			return true;
+		}
 		Node temp = get(index);
 		Node pre = get(index -1);
 		Node newNode = new Node(value);
@@ -242,6 +250,21 @@ public class LinkedList {
 		newNode.next = temp;
 		this.length ++;
 		return true;
+		
+	}
+	
+	public Node remove(int index) {
+		if(index < 0 || index > this.length) return null;
+		
+		if(index == 0) removeFirst();
+		
+		if(index == this.length) removeLast();
+		
+		Node removedNode = get(index);
+		Node temp = get(index -1);
+		temp.next = removedNode.next;
+		length --;
+		return removedNode;
 	}
 
 }
