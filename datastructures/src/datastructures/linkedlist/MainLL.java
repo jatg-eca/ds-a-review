@@ -125,16 +125,23 @@ public class MainLL {
 		myLinkedList.append(3);
 		myLinkedList.append(4);
 		myLinkedList.printList();
-		System.out.println("\n");
+//		System.out.println("\n");
+//		
+//		System.out.println("\nSe borró: " + myLinkedList.remove(1).value + "\n");
+//		myLinkedList.printList();
+//		
+////		myLinkedList.getLength();
+//		
+//		
+////		System.out.println(myLinkedList.remove(-16));
+////		System.out.println(myLinkedList.remove(133));
+//		
+//		myLinkedList.reverse();
+//		myLinkedList.printList();
 		
-		System.out.println("\nSe borró: " + myLinkedList.remove(1).value + "\n");
-		myLinkedList.printList();
-		
-		System.out.println("\nSe borró: " + myLinkedList.remove(3).value + "\n");
-		myLinkedList.printList();
-		
-		System.out.println(myLinkedList.remove(-16));
-		System.out.println(myLinkedList.remove(133));
+		//myLinkedList.printList();
+		System.out.println("\nVamo a reversearlo \n");
+		myLinkedList.reverse();
 		myLinkedList.printList();
 
 

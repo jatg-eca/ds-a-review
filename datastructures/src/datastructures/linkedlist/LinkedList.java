@@ -254,17 +254,45 @@ public class LinkedList {
 	}
 	
 	public Node remove(int index) {
-		if(index < 0 || index > this.length) return null;
+		if(index < 0 || index >= this.length) return null;
 		
 		if(index == 0) removeFirst();
 		
-		if(index == this.length) removeLast();
+		if(index == this.length - 1) removeLast();
 		
-		Node removedNode = get(index);
-		Node temp = get(index -1);
-		temp.next = removedNode.next;
+//		Node removedNode = get(index);
+//		Node temp = get(index -1);
+//		temp.next = removedNode.next;
+//		length --;
+//		return removedNode;
+		Node prev = get(index-1);
+		Node temp = prev.next;
+		
+		prev.next = temp.next;
+		temp.next = null;
 		length --;
-		return removedNode;
+		return temp;
+	}
+	
+	public void reverse() {
+		Node temp = this.head;
+		head = tail;
+		tail = temp;
+		Node before = null;
+		Node after = temp.next;
+		for(int i = 0; i<this.length; i++) {
+//			System.out.println(i);
+//			System.out.println(after);
+			//Se le pone cual va después en el anterior list
+			after = temp.next;
+			//System.out.println(before.value);
+			//Cuál va después en el nuevo list
+			temp.next = before;
+			//El de antes se pasa a temp
+			before = temp;
+			//Temp se pasa al de after
+			temp = after;
+		}
 	}
 
 }
