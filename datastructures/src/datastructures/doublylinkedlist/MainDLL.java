@@ -10,15 +10,20 @@ public class MainDLL {
 		myDll.getTail();
 		myDll.getLength();
 		
+		myDll.prepend(5);
 		myDll.printList();
-		System.out.println("Al borrar vacio " + myDll.removeLast());
+		myDll.prepend(6);
+		myDll.printList();
 		
-		myDll.append(16);
-		myDll.append(23);
-		myDll.printList();
-		System.out.println("Borrar " + myDll.removeLast().value);
-		System.out.println("A ver " + myDll.removeLast().value);
-		System.out.println("Vacio " + myDll.removeLast());
+//		myDll.printList();
+//		System.out.println("Al borrar vacio " + myDll.removeLast());
+//		
+//		myDll.append(16);
+//		myDll.append(23);
+//		myDll.printList();
+//		System.out.println("Borrar " + myDll.removeLast().value);
+//		System.out.println("A ver " + myDll.removeLast().value);
+//		System.out.println("Vacio " + myDll.removeLast());
 //		
 //		myDll.append(7);
 //		myDll.getHead();
