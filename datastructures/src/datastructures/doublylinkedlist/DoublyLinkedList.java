@@ -26,9 +26,17 @@ public class DoublyLinkedList {
 	
 	public void printList() {
 		Node temp = head;
+		int indexCount = 0;
 		while(temp != null) {
-			int indexCount = 0;
 			System.out.println("Index " + indexCount + " = " + temp.value);
+			
+			if(temp.prev != null) {
+			System.out.println("El nodo pasado de " + temp.value + " es: " + temp.prev.value);
+			}
+			else {
+				System.out.println("De " + temp.value + " el pasado es null" );
+			}
+			
 			temp = temp.next;
 			indexCount ++;
 		}
@@ -52,13 +60,19 @@ public class DoublyLinkedList {
 		Node newNode = new Node(value);
 		Node prev = null;
 		Node temp = this.head;
-		if(length <1) {
+		if(length == 0) {
 			head = newNode;
 			tail = newNode;
+			newNode.prev = prev;
 			length = 1;
 		} else {
-		while(temp.next != null) {
+//		while(temp.next != null) {
+//			prev = temp;
+//			temp = temp.next;
+//		}
+		for(int i=0; i<length; i++) {
 			prev = temp;
+			if(temp.next == null) break;
 			temp = temp.next;
 		}
 		temp.next = newNode;

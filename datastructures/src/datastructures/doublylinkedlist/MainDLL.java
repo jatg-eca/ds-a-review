@@ -13,8 +13,21 @@ public class MainDLL {
 		myDll.printList();
 		
 		myDll.append(7);
+		myDll.getHead();
+		myDll.getTail();
+		myDll.getLength();
+		
 		myDll.append(9);
+		myDll.getHead();
+		myDll.getTail();
+		myDll.getLength();
+		
 		myDll.append(16);
+		myDll.getHead();
+		myDll.getTail();
+		myDll.getLength();
+		
+		myDll.append(32);
 		myDll.printList();
 
 	}
