@@ -56,7 +56,7 @@ public class DoublyLinkedList {
 		System.out.println("Length: " + this.length);
 	}
 	
-	public void append(int value) {
+	public void appendOofN(int value) {
 		Node newNode = new Node(value);
 		Node prev = null;
 		Node temp = this.head;
@@ -80,6 +80,36 @@ public class DoublyLinkedList {
 		tail = newNode;
 		length ++;
 		}
+	}
+	
+	public void append(int value) {
+		Node newNode = new Node(value);
+		if (length == 0) {
+			head = newNode;
+			tail = newNode;
+		}
+		else {
+			tail.next = newNode;
+			newNode.prev = tail;
+			tail = newNode;
+		}
+		length ++;
+	}
+	
+	public void removeLast() {
+		if(length == 1) {
+			head = null;
+			tail = null;
+		}
+		else {
+		Node temp = tail;
+		temp = tail.prev;
+		temp.next = null;
+		tail = temp;
+		}
+		length --;
+		
+		
 	}
 
 }

@@ -29,6 +29,18 @@ public class MainDLL {
 		
 		myDll.append(32);
 		myDll.printList();
+		
+		myDll.removeLast();
+		myDll.printList();
+		
+		myDll.removeLast();
+		myDll.printList();
+		myDll.removeLast();
+		myDll.printList();
+		myDll.removeLast();
+		myDll.printList();
+		myDll.removeLast();
+		myDll.printList();
 
 	}
 
