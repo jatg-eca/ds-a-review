@@ -97,6 +97,7 @@ public class DoublyLinkedList {
 	}
 	
 	public Node removeLast() {
+		Node temp = tail;
 		if(length == 0) {
 			head = null;
 			tail = null;
@@ -104,23 +105,23 @@ public class DoublyLinkedList {
 			return null;
 		}
 		if(length == 1) {
-			Node temp = tail;
 			head = null;
 			tail = null;
 			length --;
 			//System.out.println("Se acaba de vaciar");
-			return temp;
+			//return temp;
 
 		}
 		else if (length > 1){
-		Node temp = tail;
+		//Node temp = tail;
 		tail = temp.prev;
 		temp.prev = null;
 		tail.next = null;
 		length --;
 		return temp;
 		}
-		return null;
+		length --;
+		return temp;
 		
 	}
 
