@@ -107,7 +107,7 @@ public class DoublyLinkedList {
 		if(length == 1) {
 			head = null;
 			tail = null;
-			length --;
+//			length --;
 			//System.out.println("Se acaba de vaciar");
 			//return temp;
 
@@ -117,8 +117,8 @@ public class DoublyLinkedList {
 		tail = temp.prev;
 		temp.prev = null;
 		tail.next = null;
-		length --;
-		return temp;
+//		length --;
+//		return temp;
 		}
 		length --;
 		return temp;
