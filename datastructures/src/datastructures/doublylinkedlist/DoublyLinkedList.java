@@ -96,19 +96,31 @@ public class DoublyLinkedList {
 		length ++;
 	}
 	
-	public void removeLast() {
-		if(length == 1) {
+	public Node removeLast() {
+		if(length == 0) {
 			head = null;
 			tail = null;
+			//System.out.println("No hay nada");
+			return null;
 		}
-		else {
+		if(length == 1) {
+			Node temp = tail;
+			head = null;
+			tail = null;
+			length --;
+			//System.out.println("Se acaba de vaciar");
+			return temp;
+
+		}
+		else if (length > 1){
 		Node temp = tail;
-		temp = tail.prev;
-		temp.next = null;
-		tail = temp;
-		}
+		tail = temp.prev;
+		temp.prev = null;
+		tail.next = null;
 		length --;
-		
+		return temp;
+		}
+		return null;
 		
 	}
 
