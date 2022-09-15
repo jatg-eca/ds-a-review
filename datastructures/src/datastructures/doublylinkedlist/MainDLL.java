@@ -15,6 +15,11 @@ public class MainDLL {
 		myDll.prepend(6);
 		myDll.printList();
 		
+		System.out.println(myDll.removeFirst().value);
+		System.out.println(myDll.removeFirst().value);
+		System.out.println(myDll.removeFirst());
+		
+		
 //		myDll.printList();
 //		System.out.println("Al borrar vacio " + myDll.removeLast());
 //		
