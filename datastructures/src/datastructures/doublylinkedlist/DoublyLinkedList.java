@@ -212,26 +212,27 @@ public class DoublyLinkedList {
 	}
 	
 	public boolean insert(int index, int value) {
+		if(index < 0 || index > length) return false;
 		if(index == 0) {
 			prepend(value);
 			return true;
 		}
-		else {
-		Node temp = get(index);
-		//Node after = temp.next;
-		Node prev = temp.prev;
-		Node newNode = new Node(value);
-		if(temp != null) {
-			//New node
-			newNode.next = temp;
-			newNode.prev = prev;
-			//cambio del número anterior
-			temp.prev = newNode;
-			prev.next = newNode;
-			length ++;
+		if(index == length) {
+			append(value);
 			return true;
-		}}
-		return false;
+		}
+
+		Node after = get(index);
+		Node before = after.prev;
+		Node newNode = new Node(value);
+		//New node
+		newNode.next = after;
+		newNode.prev = before; 
+		//cambio del número anterior
+		after.prev = newNode;
+		before.next = newNode;
+		length ++;
+		return true;
 	}
 
 }
