@@ -4,8 +4,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stack stacked = new Stack(4);
+		Stack stacked = new Stack();
 		
+		stacked.getHeight();
+		stacked.getTop();
+		
+		stacked.printStack();  //LIFO
+		System.out.println("\n");
+		
+		stacked.push(4);
 		stacked.getHeight();
 		stacked.getTop();
 		

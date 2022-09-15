@@ -19,10 +19,14 @@ public class Stack {
 		height = 1;
 	}
 	
+	public Stack() {
+		
+	}
+	
 	//Getters
 	public void getTop() {
 		if(this.top == null) System.out.println("Nothing on top");
-		System.out.println("Top: " + this.top.value);
+		else System.out.println("Top: " + this.top.value);
 	}
 	
 	public void getHeight() {
@@ -30,22 +34,30 @@ public class Stack {
 	}
 	
 	public void printStack() {
-		int index = 0;
-		Node temp = top;
-		while (temp != null) {
-			System.out.println("Index " + index + " value = " + temp.value);
-			temp = temp.next;
-			index ++;
+		if(this.height <1) {
+			System.out.println("Nothing in stack");
+		} else {
+			int index = 0;
+			Node temp = top;
+			while (temp != null) {
+				System.out.println("Index " + index + " value = " + temp.value);
+				temp = temp.next;
+				index ++;
+			}
 		}
 	}
 	
 	//Métodos
 	public void push(int value) {
 		Node newNode = new Node(value);
+		if(height < 1) {
+			top = newNode;
+		} else {
 //		Node temp = top;
 //		newNode.next = temp;
 		newNode.next = top;
 		top = newNode;
+		}
 		height ++;
 	}
 
