@@ -15,9 +15,11 @@ public class MainDLL {
 		myDll.prepend(6);
 		myDll.printList();
 		
-		System.out.println(myDll.removeFirst().value);
-		System.out.println(myDll.removeFirst().value);
-		System.out.println(myDll.removeFirst());
+		System.out.println(myDll.get(0).value);
+		
+//		System.out.println(myDll.removeFirst().value);
+//		System.out.println(myDll.removeFirst().value);
+//		System.out.println(myDll.removeFirst());
 		
 		
 //		myDll.printList();

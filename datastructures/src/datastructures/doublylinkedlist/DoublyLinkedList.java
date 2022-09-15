@@ -150,12 +150,17 @@ public class DoublyLinkedList {
 		}
 		else {
 		head = head.next;
+		head.prev = null;
 		temp.next = null;
 		}
 		length --;
 		return temp;
 	}
 	
+	/*
+	 * Este método se habilitó para hacer pruebas
+	 * en JUnit Jupiterrrrrr
+	 */
 	public boolean removeFirstBool() {
 		Node temp = head;
 		if(length == 0) {
@@ -166,11 +171,34 @@ public class DoublyLinkedList {
 			tail = null;
 		}
 		else {
-		head = head.next;
-		temp.next = null;
+			head = head.next;
+			head.prev = null;
+			temp.next = null;
 		}
 		length --;
 		return true;
+	}
+	
+	public Node get(int index) {		
+		if(index<0 || index > length) {
+			System.out.println("Out of bounds index");
+			return null;
+		}
+		Node temp = null;
+		int half = length / 2;
+		if (index <= half) {
+		temp = head;
+		for(int i=0; i<index; i++) {
+			temp=temp.next;
+		}
+		}
+		else if(index > half) {
+			temp = tail;
+			for (int i=length; i>index; i--) {
+				temp=temp.prev;
+			}
+		}
+		return temp;
 	}
 
 }
