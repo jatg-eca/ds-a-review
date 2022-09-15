@@ -31,6 +31,22 @@ public class Main {
 		stacked.getHeight();
 		stacked.getTop();
 		System.out.println("\n");
+		
+		System.out.println("Se borró " + stacked.pop().value);
+		stacked.printStack();
+		System.out.println("\n");
+		
+		System.out.println("Se borró " + stacked.pop().value);
+		stacked.printStack();
+		System.out.println("\n");
+		
+		System.out.println("Se borró " + stacked.pop().value);
+		stacked.printStack();
+		System.out.println("\n");
+		
+		System.out.println(stacked.pop());
+		stacked.getTop();
+		stacked.getHeight();
 
 
 	}
