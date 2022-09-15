@@ -4,18 +4,23 @@ public class MainDLL {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		DoublyLinkedList myDll = new DoublyLinkedList();
+		DoublyLinkedList myDll = new DoublyLinkedList(1);
 		
 		myDll.getHead();
 		myDll.getTail();
 		myDll.getLength();
 		
-		myDll.prepend(5);
+		myDll.prepend(0);
 		myDll.printList();
-		myDll.prepend(6);
+		myDll.append(2);
+		myDll.append(3);
+		myDll.append(4);
+		myDll.append(5);
 		myDll.printList();
 		
-		System.out.println(myDll.get(0).value);
+		//System.out.println(myDll.get(6).value);
+		System.out.println(myDll.set(3, 54) + "\n");
+		myDll.printList();
 		
 //		System.out.println(myDll.removeFirst().value);
 //		System.out.println(myDll.removeFirst().value);

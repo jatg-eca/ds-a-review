@@ -194,11 +194,21 @@ public class DoublyLinkedList {
 		}
 		else if(index > half) {
 			temp = tail;
-			for (int i=length; i>index; i--) {
+			for (int i=length-1; i>index; i--) {
 				temp=temp.prev;
 			}
 		}
 		return temp;
+	}
+	
+	public boolean set(int index, int value) {
+		if(index <0 || index > length) 
+			return false;
+		else {
+			Node temp = get(index);
+			temp.value = value;
+			return true;
+		}
 	}
 
 }

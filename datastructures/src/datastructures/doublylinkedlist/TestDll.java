@@ -15,33 +15,31 @@ class TestDll {
 	
 	@BeforeEach
 	void setUp() {
-		myDll=new DoublyLinkedList();
+		myDll=new DoublyLinkedList(1);
 		
-		myDll.append(5);
+		myDll.prepend(0);
+		myDll.printList();
+		myDll.append(2);
 		myDll.append(3);
+		myDll.append(4);
+		myDll.append(5);
 	}
 	
 
 	@Test
 	@DisplayName("Test uno")
 	void testUno() {
-		assertTrue(myDll.removeFirstBool());
+		assertTrue(myDll.set(6, 16));
 		//assertEquals(1, )
 	}
 	
 	@Test
-	@DisplayName("Quitando dos")
+	@DisplayName("Test dos. Out of bounds")
 	void testDos() {
-		assertTrue(myDll.removeFirstBool());
-		assertTrue(myDll.removeFirstBool());
-	}
-	
-	@Test
-	@DisplayName("Quitando todos")
-	void testTres() {
-		assertTrue(myDll.removeFirstBool());
-		assertTrue(myDll.removeFirstBool());
-		assertTrue(myDll.removeFirstBool(), "este no da true");
+		assertAll(
+				() -> assertFalse(myDll.set(100, 100), "Esto da false: Es mayor al length"),
+				() -> assertFalse(myDll.set(-15, 32), "Esto da false: Es menor a cero")
+				);
 	}
 
 }
