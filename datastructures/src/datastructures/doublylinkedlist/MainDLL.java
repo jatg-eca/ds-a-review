@@ -19,7 +19,10 @@ public class MainDLL {
 		myDll.printList();
 		
 		//System.out.println(myDll.get(6).value);
-		System.out.println(myDll.set(3, 54) + "\n");
+		//System.out.println(myDll.set(3, 54) + "\n");
+		
+		System.out.println("AVBER" + myDll.insert(3, 33));
+		System.out.println("WENO" + myDll.insert(0, 54));
 		myDll.printList();
 		
 //		System.out.println(myDll.removeFirst().value);
