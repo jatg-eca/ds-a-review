@@ -22,6 +22,13 @@ public class MainQ {
 		
 		myFifas.getFirst();
 		myFifas.getLast();
+		
+		System.out.println(myFifas.dequeue().value);
+		myFifas.getFirst();
+		System.out.println(myFifas.dequeue().value);
+		myFifas.getFirst();
+		System.out.println("Se borra " + myFifas.dequeue().value);
+		myFifas.getFirst();
 	
 	
 	}

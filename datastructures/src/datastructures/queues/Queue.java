@@ -62,5 +62,23 @@ public class Queue {
 			length ++;
 		}
 	}
+	
+	public Node dequeue() {
+		Node temp = first;
+		if(length < 1) {
+			return null;
+		}
+		else if(length == 1) {
+			first = null;
+			last = null;
+//			length --;
+//			return temp;
+		}
+		else {
+			first = first.next;
+		}
+		length --;
+		return temp;			
+	}
 
 }
