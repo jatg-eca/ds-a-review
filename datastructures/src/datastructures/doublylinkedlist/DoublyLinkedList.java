@@ -222,8 +222,8 @@ public class DoublyLinkedList {
 			return true;
 		}
 
-		Node after = get(index);
-		Node before = after.prev;
+		Node before = get(index -1);
+		Node after = before.next;
 		Node newNode = new Node(value);
 		//New node
 		newNode.next = after;
@@ -233,6 +233,44 @@ public class DoublyLinkedList {
 		before.next = newNode;
 		length ++;
 		return true;
+	}
+	
+	public Node remove(int index) {
+		Node temp = get(index);
+		if(index < 0 || index > length) {
+			return null;
+		}
+		if(index == 0) {
+			return removeFirst();
+		}
+		if(index == length) {
+			return removeLast();
+		}
+		Node before = temp.prev;
+		Node after = temp.next;
+		
+		before.next = after;
+		after.prev = before;
+		
+		temp.next = null;
+		temp.prev = null;
+		
+		length --;
+		return temp;
+		
+	}
+	
+	public Node lazyRemove(int index) {
+		if(index < 0 || index > length) return null;
+		if (index == 0) return removeFirst();
+		if (index == length) return removeLast();
+		Node temp = get(index);
+		temp.next.prev = temp.prev;
+		temp.prev.next = temp.next;
+		
+		temp.prev = null;
+		temp.next = null;
+		return temp;
 	}
 
 }
