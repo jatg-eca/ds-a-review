@@ -1,14 +1,14 @@
 package datastructures.binarysearchtree;
 
 public class BinarySearchTree {
-	Node root;
+	private Node root;
 	
-//	public BinarySearchTree(int value) {
-//		Node newNode = new Node(value);
-//		root = newNode;
-//	}
-//	
-//	public BinarySearchTree(){}
+	public BinarySearchTree(int value) {
+		Node newNode = new Node(value);
+		root = newNode;
+	}
+	
+	public BinarySearchTree(){}
 	
 	class Node{
 		int value;
@@ -19,5 +19,11 @@ public class BinarySearchTree {
 			this.value = value;
 		}
 	}
+	
+	public Node getRoot() {
+		return root;
+	}
+	
+	
 
 }
