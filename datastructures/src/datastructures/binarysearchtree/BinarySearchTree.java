@@ -3,7 +3,7 @@ package datastructures.binarysearchtree;
 import org.junit.jupiter.api.io.TempDir;
 
 public class BinarySearchTree {
-	private Node root;
+	Node root;
 	
 	public BinarySearchTree(int value) {
 		Node newNode = new Node(value);
@@ -28,36 +28,37 @@ public class BinarySearchTree {
 	
 	public boolean insert(int value) {
 		Node newNode = new Node(value);
-		boolean achieved = false;
 		if(root == null) {
 			root = newNode;
-			achieved = true;
+			return true;
 		} else {
 		Node temp = root;
-		while(temp != null) {
+		while(true) {
 			if(newNode.value == temp.value) {
-				break;
+				return false;
 			}
 			if(newNode.value < temp.value) {
-				System.out.println("menor");
-				temp = temp.left;
+//				System.out.println("menor");
+				if(temp.left == null) {
+					temp.left = newNode;
+					return true;
+				}
+				else {
+					temp = temp.left;
+				}
 			} 
 			else if(newNode.value > temp.value) {
-				System.out.println("mayor");
-				System.out.println("Temp antes" + temp.value);
-				temp = temp.right;
-				System.out.println("Temp después" + temp);
-			}
-			if(temp == null) {
-				achieved = true;
-				System.out.println("ok");
-				temp = newNode;
-			}
-			else { 
-				continue;
+//				System.out.println("mayor");
+				if(temp.right == null) {
+					temp.right = newNode;
+					return true;
 				}
-		}}
-		return achieved;
+				else {
+					temp = temp.right;
+				}
+			}
+		}
 	}
+}
 
 }

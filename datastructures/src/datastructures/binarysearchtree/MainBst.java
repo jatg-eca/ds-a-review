@@ -14,6 +14,9 @@ public class MainBst {
 		System.out.println(mybts.insert(25));
 		System.out.println(mybts.insert(84));
 		System.out.println(mybts.insert(36));
+		System.out.println(mybts.getRoot().value);
+		
+		System.out.println(mybts.root.left.right.value);
 		
 	}
 
