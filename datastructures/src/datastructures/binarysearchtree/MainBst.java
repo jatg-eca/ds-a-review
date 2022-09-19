@@ -8,6 +8,7 @@ public class MainBst {
 		BinarySearchTree mybts = new BinarySearchTree();
 		//System.out.println("Root = " +  mybts.root);
 		System.out.println(mybts.getRoot());
+		System.out.println("Contains " + mybts.contains(4));
 		System.out.println(mybts.insert(54));
 		System.out.println(mybts.insert(54));
 		System.out.println(mybts.insert(56));
@@ -17,6 +18,9 @@ public class MainBst {
 		System.out.println(mybts.getRoot().value);
 		
 		System.out.println(mybts.root.left.right.value);
+		System.out.println("Contains " + mybts.contains(4));
+		System.out.println("Contains " + mybts.contains(32));
+		System.out.println("Contains " + mybts.contains(36));
 		
 	}
 
