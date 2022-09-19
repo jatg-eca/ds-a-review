@@ -63,7 +63,7 @@ public class BinarySearchTree {
 
 	
 	public boolean contains(int value) {
-		if(root == null) return false;
+		if(root == null) return false; //This line can be ommited
 		Node temp = root;
 		while(temp != null) {
 			if(value < temp.value) {
