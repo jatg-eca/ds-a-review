@@ -82,5 +82,23 @@ public class HashTable {
 			temp.next = newNode;
 		}
 		}
+	
+	public int get(String key){
+		int index = hash(key);
+		int value = 0;
+		Node temp = dataMap[index];
+		if(temp != null) {
+			if(temp.key.equals(key)) {
+				return temp.value;
+			}
+			else {
+				temp=temp.next;
+			}
+		}
+		else {
+			value = 0;
+		}
+		return value;
+	}
 
 }

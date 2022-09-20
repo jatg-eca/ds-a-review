@@ -16,6 +16,8 @@ public class MainHT {
 		myHashTable.printTable();
 		myHashTable.set("nails", 4500);
 		myHashTable.printTable();
+		System.out.println("Key x: "+ myHashTable.get("x"));
+		System.out.println("Key aa: "+ myHashTable.get("nails"));
 	}
 	
 
