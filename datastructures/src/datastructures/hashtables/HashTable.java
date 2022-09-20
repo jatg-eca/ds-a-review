@@ -47,14 +47,21 @@ public class HashTable {
 		Node newNode = new Node(key, value);
 		int hashvalue = hash(newNode.key);
 		hashvalue = Math.round(hashvalue);
-		if(dataMap[hashvalue] == null) dataMap[hashvalue] = newNode;
-		else {
+		if(dataMap[hashvalue] == null) {
+			dataMap[hashvalue] = newNode;
+		}
+		else if(dataMap[hashvalue] != null) {
+			int length = 0;
 			Node temp = dataMap[hashvalue];
 			while(temp != null) {
 				temp = temp.next;
-				System.out.println("ok"+ temp);
+				length ++;
 			}
-			temp = dataMap[hashvalue];
+			Node add = dataMap[hashvalue];
+			for(int i = 0; i<length; i++) {
+				add = add.next;
+			}
+			add.next = newNode;
 		}
 		
 	}

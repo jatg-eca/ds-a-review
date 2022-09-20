@@ -11,7 +11,8 @@ public class MainHT {
 		//myHashTable.printTable();
 		myHashTable.set("ee", 1000);
 		myHashTable.set("ee", 3500);
-		//myHashTable.set("ee", 1000);
+		myHashTable.set("ee", 6500);
+		myHashTable.set("aa", 6500);
 		myHashTable.printTable();
 	}
 	
