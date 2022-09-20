@@ -87,18 +87,13 @@ public class HashTable {
 		int index = hash(key);
 		int value = 0;
 		Node temp = dataMap[index];
-		if(temp != null) {
+		while(temp != null) {
 			if(temp.key.equals(key)) {
 				return temp.value;
 			}
-			else {
-				temp=temp.next;
-			}
+			temp = temp.next;
 		}
-		else {
-			value = 0;
-		}
-		return value;
+		return 0;
 	}
 
 }
