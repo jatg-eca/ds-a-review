@@ -42,5 +42,21 @@ public class HashTable {
 		}
 		return hash;
 	}
+	
+	public void set(String key, int value) {
+		Node newNode = new Node(key, value);
+		int hashvalue = hash(newNode.key);
+		hashvalue = Math.round(hashvalue);
+		if(dataMap[hashvalue] == null) dataMap[hashvalue] = newNode;
+		else {
+			Node temp = dataMap[hashvalue];
+			while(temp != null) {
+				temp = temp.next;
+				System.out.println("ok"+ temp);
+			}
+			temp = dataMap[hashvalue];
+		}
+		
+	}
 
 }
