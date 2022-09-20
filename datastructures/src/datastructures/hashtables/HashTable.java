@@ -1,5 +1,7 @@
 package datastructures.hashtables;
 
+import java.util.ArrayList;
+
 public class HashTable {
 	private int size = 7; //prime number to avoid collisions
 	private Node[] dataMap;
@@ -94,6 +96,24 @@ public class HashTable {
 			temp = temp.next;
 		}
 		return 0;
+	}
+	
+	public ArrayList keys() {
+		ArrayList<String> keyArrayList = new ArrayList<String>();
+		for(int i = 0; i<dataMap.length; i++) {
+			Node temp = dataMap[i];
+			if(temp != null) {
+			while(temp != null) {
+				keyArrayList.add(temp.key);
+				temp = temp.next;
+			}}
+			else {
+				continue;
+			}
+			
+		}
+		return keyArrayList;
+		
 	}
 
 }

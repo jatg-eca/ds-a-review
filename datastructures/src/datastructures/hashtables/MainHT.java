@@ -9,15 +9,17 @@ public class MainHT {
 		myHashTable.printTable();
 		myHashTable.set("nails", 1000);
 		//myHashTable.printTable();
-		myHashTable.set("ee", 1000);
-		myHashTable.set("ee", 3500);
-		myHashTable.set("ee", 6500);
-		myHashTable.set("aa", 6500);
+		myHashTable.set("bolts", 10);
+		myHashTable.set("lumber", 3500);
+		myHashTable.set("hammers", 6500);
+		myHashTable.set("backpacks", 30);
 		myHashTable.printTable();
-		myHashTable.set("nails", 4500);
+		myHashTable.set("tiles", 4500);
 		myHashTable.printTable();
-		System.out.println("Key x: "+ myHashTable.get("x"));
-		System.out.println("Key aa: "+ myHashTable.get("nails"));
+		System.out.println("Key bolts: "+ myHashTable.get("bolts"));
+		System.out.println("Key nails: "+ myHashTable.get("nails"));
+		System.out.println("Key tiles: "+ myHashTable.get("tiles"));
+		System.out.println(myHashTable.keys().toString());
 	}
 	
 
