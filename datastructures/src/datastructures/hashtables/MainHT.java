@@ -14,6 +14,8 @@ public class MainHT {
 		myHashTable.set("ee", 6500);
 		myHashTable.set("aa", 6500);
 		myHashTable.printTable();
+		myHashTable.set("nails", 4500);
+		myHashTable.printTable();
 	}
 	
 

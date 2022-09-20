@@ -58,7 +58,8 @@ public class HashTable {
 				length ++;
 			}
 			Node add = dataMap[hashvalue];
-			for(int i = 0; i<length; i++) {
+			for(int i = 0; i<length-1; i++) {
+				//System.out.println(dataMap[hashvalue].key + " : " + length);
 				add = add.next;
 			}
 			add.next = newNode;
