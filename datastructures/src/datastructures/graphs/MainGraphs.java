@@ -6,8 +6,14 @@ public class MainGraphs {
 	
 		Graph myGraph = new Graph();
 		System.out.println(myGraph.addVertex("A"));
-		System.out.println(myGraph.addVertex("A"));
+//		System.out.println(myGraph.addVertex("A"));
+		System.out.println(myGraph.addVertex("B"));
 		
+		myGraph.printGraph();
+		System.out.println(myGraph.addEdge("B", "A")); //Unidirecc
+//		System.out.println(myGraph.addEdge("A", "D")); //Bidirecc
+//		System.out.println(myGraph.addEdge("A", "E")); //Bidirecc
+		System.out.println(myGraph.addEdge("A", "B")); //Bidirecc
 		myGraph.printGraph();
 	}
 	

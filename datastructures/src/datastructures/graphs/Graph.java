@@ -28,4 +28,22 @@ public class Graph {
 		System.out.println(adjList);
 	}
 	
+	public boolean addEdge(String vertex, String edge) {
+		if (adjList.get(vertex) == null) {
+			System.out.println("El vertex no está");
+			return false;
+		}
+		else {
+			ArrayList<String> info = adjList.get(vertex);
+			if(adjList.get(edge) == null || edge.equals(vertex)) {
+				System.out.println("No hay vertex para el edge");
+				return false;
+			}
+			else {
+				info.add(edge);
+				return true;
+			}
+		}
+	}
+	
 }
