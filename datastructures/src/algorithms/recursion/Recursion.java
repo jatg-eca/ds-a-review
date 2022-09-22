@@ -18,6 +18,9 @@ public class Recursion {
 //		}
 //		openTheBox();
 //	}
+	
+	//Stack overflows if there is not an ending condition ^^
+	//callstack on misc call stack
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
