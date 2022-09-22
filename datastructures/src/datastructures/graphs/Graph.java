@@ -71,4 +71,16 @@ public class Graph {
 		return false;
 	}
 	
+	public boolean removeVertex(String vertexRemoved) {
+		if(adjList.get(vertexRemoved) != null) {
+			for(int i= 0; i<adjList.get(vertexRemoved).size(); i++) {
+				String vertex = adjList.get(vertexRemoved).get(i);
+				adjList.get(vertex).remove(vertexRemoved);
+			}
+			adjList.remove(vertexRemoved);
+			return true;
+		}
+		return false;
+	}
+	
 }
