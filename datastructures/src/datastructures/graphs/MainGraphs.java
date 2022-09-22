@@ -10,11 +10,17 @@ public class MainGraphs {
 		System.out.println(myGraph.addVertex("B"));
 		
 		myGraph.printGraph();
-		System.out.println(myGraph.addEdge("B", "A")); //Unidirecc
+		System.out.println(myGraph.addEdge("B", "A"));
 //		System.out.println(myGraph.addEdge("A", "D")); //Bidirecc
 //		System.out.println(myGraph.addEdge("A", "E")); //Bidirecc
-		System.out.println(myGraph.addEdge("A", "B")); //Bidirecc
+//		System.out.println(myGraph.addEdge("A", "B")); 
 		myGraph.printGraph();
+		
+		System.out.println(myGraph.removeEdge("C", "D"));
+		System.out.println(myGraph.removeEdge("A", "B"));
+		
+		myGraph.printGraph();
+		
 	}
 	
 

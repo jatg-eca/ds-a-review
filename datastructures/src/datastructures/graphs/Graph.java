@@ -28,7 +28,7 @@ public class Graph {
 		System.out.println(adjList);
 	}
 	
-	public boolean addEdge(String vertex, String edge) {
+	public boolean addEdgeJATG(String vertex, String edge) {
 		if (adjList.get(vertex) == null) {
 			System.out.println("El vertex no está");
 			return false;
@@ -44,6 +44,30 @@ public class Graph {
 				return true;
 			}
 		}
+	}
+	
+	public boolean addEdge(String vertexOne, String vertexTwo) {
+		if(adjList.get(vertexOne) != null 
+				&& 
+		   adjList.get(vertexTwo) != null) {
+			
+			adjList.get(vertexOne).add(vertexTwo);
+			adjList.get(vertexTwo).add(vertexOne);
+			return true;
+		} 
+		return false;
+	}
+	
+	public boolean removeEdge(String vertexOne, String vertexTwo) {
+		if(adjList.get(vertexOne) != null
+				&&
+			adjList.get(vertexTwo) != null) {
+			adjList.get(vertexOne).remove(vertexTwo);
+			adjList.get(vertexTwo).remove(vertexOne);
+			return true;
+		}
+			
+		return false;
 	}
 	
 }
