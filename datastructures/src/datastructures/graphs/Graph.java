@@ -62,6 +62,7 @@ public class Graph {
 		if(adjList.get(vertexOne) != null
 				&&
 			adjList.get(vertexTwo) != null) {
+			//
 			adjList.get(vertexOne).remove(vertexTwo);
 			adjList.get(vertexTwo).remove(vertexOne);
 			return true;

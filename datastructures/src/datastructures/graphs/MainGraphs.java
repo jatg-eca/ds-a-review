@@ -8,9 +8,12 @@ public class MainGraphs {
 		System.out.println(myGraph.addVertex("A"));
 //		System.out.println(myGraph.addVertex("A"));
 		System.out.println(myGraph.addVertex("B"));
+		System.out.println(myGraph.addVertex("C"));
 		
 		myGraph.printGraph();
 		System.out.println(myGraph.addEdge("B", "A"));
+		System.out.println(myGraph.addEdge("C", "B"));
+		System.out.println(myGraph.addEdge("C", "A"));
 //		System.out.println(myGraph.addEdge("A", "D")); //Bidirecc
 //		System.out.println(myGraph.addEdge("A", "E")); //Bidirecc
 //		System.out.println(myGraph.addEdge("A", "B")); 
