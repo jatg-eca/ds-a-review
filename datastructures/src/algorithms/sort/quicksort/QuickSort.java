@@ -9,18 +9,11 @@ public class QuickSort {
 		for(int i=pivotIndex+1; i<endingIndex; i++) {
 			if(array[i] < array[pivotIndex]) {
 				swapIndex++;
-//				int temp = array[swapIndex];
-//				array[swapIndex] = array[i];
-//				array[i] = temp;
 				swap(array, swapIndex, i);
 			}
 		}
-//		int temp = array[swapIndex];
-//		array[swapIndex] = array[pivotIndex];
-//		array[pivotIndex] = temp;
 		swap(array, swapIndex, pivotIndex);
 		
-		System.out.println( Arrays.toString( array ));
 		return swapIndex;
 	}
 	
@@ -66,7 +59,10 @@ public class QuickSort {
 	public static void main(String[] miau) {
 		int [] myarray = {4, 6, 1, 7, 3, 2, 5};
 //		int [] myarray = {9, 6, 1, 7, 3, 2, 5, 8, 4};
-		System.out.println(pivoting(myarray, 0, myarray.length));
+//		System.out.println(pivoting(myarray, 0, myarray.length));
+		int returnedIndex = pivoting(myarray, 0, myarray.length);
+		System.out.println("Index used is now at index \\#" + returnedIndex);
+		System.out.println(Arrays.toString(myarray));
 	}
 
 }
