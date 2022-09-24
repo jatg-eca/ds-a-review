@@ -38,13 +38,74 @@ public class MergeSort {
 		return combinedArray;
 	}
 	
+	public static int [] mergesortNoCopy(int [] array) {
+		if(array.length == 1) return array;
+
+		int half = array.length / 2;
+		int  [] array1 = new int[half];
+		int [] array2 = new int[array.length - half];
+		
+		int j = 0;
+		int k = 0;
+		for(int i=0; i<array.length; i++) {
+			if(j<array1.length) {
+				array1[j] = array[i];
+				j++;
+			}
+			else if(k < array2.length) {
+				array2[k] = array[i];
+				k++;
+			}
+		}
+		
+		return merge(mergesortNoCopy(array1), mergesortNoCopy(array2));
+	}
+	
+	public static int [] mergeSort(int [] array) {
+		if(array.length == 1) return array;
+		
+		int mid = array.length / 2;
+		int [] left = Arrays.copyOfRange(array, 0, mid);
+		int [] right = Arrays.copyOfRange(array, mid, array.length);
+		
+		return merge(mergeSort(left), mergeSort(right));
+		
+	}
+	
+	public static void divide(int [] array) {
+		if(array.length !=1) {
+		int half = array.length/2;
+		int [] array1 = new int [half];
+		int [] array2 = new int [array.length - half];
+		int j = 0;
+		int k = 0;
+		for(int i=0; i<array.length; i++) {
+			if(j<array1.length) {
+				array1[j] = array[i];
+				j++;
+			}
+			else if(k < array2.length) {
+				array2[k] = array[i];
+				k++;
+			}
+		}
+			divide(array1);
+			divide(array2);
+			if(array1.length == 1 && array2.length == 1) {
+				System.out.println( Arrays.toString( merge(array1, array2)));
+			}
+		}
+	}
+	
 	public static void main(String [] arra) {
 		System.out.println("Merging");
 
-        int[] array1 = {1,3,7,8};
-        int[] array2 = {2,4,5,6};
+        int[] array3 = {2, 3 , 4, 1, 6, 8, 10, 9};
+        
+        System.out.println(Arrays.toString( mergeSort(array3) ));
+        System.out.println(Arrays.toString( mergesortNoCopy(array3) ));
 
-        System.out.println( Arrays.toString( merge(array1, array2) ) );
+        //System.out.println( Arrays.toString( merge(array1, array2) ) );
 
         /*
             EXPECTED OUTPUT:
@@ -52,6 +113,9 @@ public class MergeSort {
             [1, 2, 3, 4, 5, 6, 7, 8]
 
          */
+        
+        
+        
 
     }
 
