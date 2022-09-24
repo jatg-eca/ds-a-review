@@ -5,8 +5,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 	
-	public static int[] merge(int [] array1, int [] array2) {
-		
+	public static int [] merge(int [] array1, int [] array2) {
 		int [] combinedArray = new int [array1.length + array2.length];
 		int index = 0;
 		int i = 0;
@@ -20,23 +19,22 @@ public class MergeSort {
 				combinedArray[index] = array2[j];
 				j++;
 			}
-			index ++;
+			index++;
 		}
 		if(i<array1.length) {
 			while(i<array1.length) {
 				combinedArray[index] = array1[i];
-				index++;
-				i++;
+				i++; index++;
 			}
 		}
 		else if(j<array2.length) {
 			while(j<array2.length) {
 				combinedArray[index] = array2[j];
-				index++;
-				j++;
+				j++; index++;
 			}
+			
 		}
-
+		
 		return combinedArray;
 	}
 	
