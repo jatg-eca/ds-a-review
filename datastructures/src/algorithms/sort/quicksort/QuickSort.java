@@ -54,14 +54,28 @@ public class QuickSort {
 		return swap;
 	}
 	
+	public static void quickSortMethod(int [] array, int left, int right) {
+		if(left<right) {
+			int pivotIndex = pivoting(array, left, right);
+			quickSortMethod(array, left, pivotIndex-1);
+			quickSortMethod(array, pivotIndex+1, right);
+		}
+	}
+	
+	public static void quickSort(int [] array) {
+		quickSortMethod(array, 0, array.length-1);
+	}
 	
 	
 	public static void main(String[] miau) {
 		int [] myarray = {4, 6, 1, 7, 3, 2, 5};
-//		int [] myarray = {9, 6, 1, 7, 3, 2, 5, 8, 4};
+//		int [] myarray = {5, 6, 1, 7, 3, 2, 9, 8, 4, 32};
 //		System.out.println(pivoting(myarray, 0, myarray.length));
-		int returnedIndex = pivoting(myarray, 0, myarray.length);
-		System.out.println("Index used is now at index \\#" + returnedIndex);
+//		int returnedIndex = pivoting(myarray, 0, myarray.length);
+//		System.out.println("Index used is now at index \\#" + returnedIndex);
+//		System.out.println(Arrays.toString(myarray));
+		
+		quickSort(myarray);
 		System.out.println(Arrays.toString(myarray));
 	}
 
