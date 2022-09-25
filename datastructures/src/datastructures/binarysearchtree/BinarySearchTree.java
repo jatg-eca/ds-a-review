@@ -84,7 +84,13 @@ public class BinarySearchTree {
 		return false;
 	}
 	
-	
+	/***
+	 * Writes an arraylist that replicates
+	 * the order of the elements
+	 * row by row
+	 * column by column
+	 * @return
+	 */
 	public ArrayList<Integer> BFS(){
 		Node currentNode = root;
 		Queue<Node> queue = new LinkedList<>();
@@ -102,6 +108,12 @@ public class BinarySearchTree {
 		return values;
 	}
 	
+	
+	/***
+	 * Allows to write an array of elements going to the left
+	 * starting from the root
+	 * @return
+	 */
 	public ArrayList<Integer> DFSpreorder() {
 		ArrayList<Integer> values = new ArrayList<>();
 		
@@ -122,6 +134,11 @@ public class BinarySearchTree {
 		return values;
 	}
 	
+	
+	/***
+	 * Allows to write an arraylist of elements starting from the root
+	 * @return
+	 */
 	public ArrayList<Integer> DFSpostorder() {
 		ArrayList<Integer> values = new ArrayList<>();
 		
@@ -142,6 +159,10 @@ public class BinarySearchTree {
 		return values;
 	}
 	
+	/***
+	 * Allows to write an arraylist of numbers in order
+	 * @return
+	 */
 	public ArrayList<Integer> DFSinorder() {
 		
 		ArrayList<Integer> values = new ArrayList<>();
