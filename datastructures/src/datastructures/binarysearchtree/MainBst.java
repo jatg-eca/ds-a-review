@@ -35,7 +35,7 @@ public class MainBst {
 		
 		
 		System.out.println("\nDFS PreOrder:");
-//	        System.out.println( mybts.DFSPreOrder() );
+	        System.out.println( mybts.DFSpreorder() );
 		/*
 	            EXPECTED OUTPUT:
 	            ----------------

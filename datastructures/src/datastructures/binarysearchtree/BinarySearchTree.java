@@ -103,12 +103,22 @@ public class BinarySearchTree {
 	}
 	
 	public ArrayList<Integer> DFSpreorder() {
-		Node currentNode = root;
 		ArrayList<Integer> values = new ArrayList<>();
-		Stack<Node> stacks = new Stack<>();
-		stacks.add(currentNode);
-
 		
+		class Traverse{
+			Traverse(Node currentNode) {
+				values.add(currentNode.value);
+				if(currentNode.left != null) {
+					new Traverse(currentNode.left);
+				}
+				if(currentNode.right != null) {
+					new Traverse(currentNode.right);
+				}
+				
+			}
+		} 
+
+		new Traverse(root);
 		return values;
 	}
 }
