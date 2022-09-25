@@ -31,6 +31,7 @@ public class MainBst {
 	        mybts.insert(82);
 
 		
+	        System.out.println("\nBreadth First Search");
 		System.out.println(mybts.BFS());
 		
 		
@@ -43,5 +44,9 @@ public class MainBst {
 	            [47, 21, 18, 27, 76, 52, 82]
 
 		 */
+	        
+	        System.out.println("\nDFS PostMalonek:");
+	        System.out.println( mybts.DFSpostorder() );
+	    
 
 	}}
