@@ -141,4 +141,26 @@ public class BinarySearchTree {
 		new Traverse(root);
 		return values;
 	}
+	
+	public ArrayList<Integer> DFSinorder() {
+		
+		ArrayList<Integer> values = new ArrayList<>();
+		
+		class Traverse{
+			Traverse(Node currentNode) {
+				if(currentNode.left != null) {
+					new Traverse(currentNode.left);
+				}
+				
+				values.add(currentNode.value);
+				
+				if(currentNode.right != null) {
+					new Traverse(currentNode.right);
+				}
+			}
+		}
+		
+		new Traverse(root);
+		return values;
+	}
 }

@@ -48,5 +48,7 @@ public class MainBst {
 	        System.out.println("\nDFS PostMalonek:");
 	        System.out.println( mybts.DFSpostorder() );
 	    
+	        System.out.println("\nDFS InOrder:");
+	        System.out.println( mybts.DFSinorder() );
 
 	}}
