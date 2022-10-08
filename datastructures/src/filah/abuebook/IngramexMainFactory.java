@@ -37,6 +37,29 @@ public class IngramexMainFactory {
 	        System.out.println(names[0][0] + names[1][0]);
 	        // Ms. Jones
 	        System.out.println(names[0][2] + names[1][1]);
+	        
+	        String[] arrayOne = {"Abue", "Maricruz", "Andy", "Jorge",
+	        		"Yuritzi", "Cris", "Victor", "Mariana", "El Santo",
+	        		"Antonio"};
+	        
+	        String [] arrayDos = new String[9];
+	        
+	        System.arraycopy(arrayOne, 1, arrayDos, 0, 7);
+	        
+	        System.out.println(Arrays.toString(arrayDos));
+	        
+	        String [] copiedArray = Arrays.copyOfRange(arrayOne, 1, arrayOne.length - 1);
+	        
+	        System.out.println(Arrays.toString(copiedArray));
+	        
+	        if(false) {
+	        	int i= 1;
+	        }
+	        else {
+	        	System.out.println("LOL ALWAYS TRUE");
+	        }
+	        
+	        
 		
 	}
 
