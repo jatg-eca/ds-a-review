@@ -76,9 +76,23 @@ public class MainReviews {
 			counterDo++;
 		} while (counterDo < 0);
 		System.out.println("Do-while counter " + counterDo);
-		for(String abue = "abue"; true; ) {
-			
+
+		//For infinite loop
+//		for(String abue = "abue"; true; ) {
+//			System.out.println("hola " + counterDo++);
+//		}
+		String stringAcabado = "nuevaAcounter: Acounter: Acounter: Acounter: Acounter: ";
+		
+//		for(String nueva = "nueva"; nueva.equals(stringAcabado); ){//counterDo <= 10; counterDo++) {
+//			System.out.println(nueva);
+//			nueva = nueva + "A" + "counter: ";
+//		}
+//		
+		int [] arrayNumbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+		for(int number : arrayNumbers) {
+			System.out.println(number);
 		}
+		
 	}
 	
 
