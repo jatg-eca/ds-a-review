@@ -115,7 +115,64 @@ public class MainReviews {
 		}
 		System.out.println("Ya se acabó el número");
 		
-	}
-	
+		String searchMe = "peter piper picked a " + "peck of pickled peppers";
+		int max = searchMe.length();
+		int numOfPs = 0;
+		
+		for(int i = 0; i<max; i++) {
+			if(searchMe.charAt(i) != 'p') {
+				
+				continue;
+			}
+			numOfPs ++;
+		}
+		System.out.println("Numero: " + numOfPs);
+		
+		String searchMeNow = "Look for a substring in me";
+        String substring = "sub";
+        boolean foundIt = false;
+        int maxO = searchMeNow.length() - substring.length();
+        test:
+        for(int i = 0; i <= maxO; i++) {
+        	int n = substring.length();
+        	int j = i;
+        	int k = 0;
+        	
+        	while(n-- != 0) {
+        		if(searchMeNow.charAt(j++) == substring.charAt(k++)) {
+        			continue test;
+        		}
+        	}
+        	foundIt = true;
+        	break test;
+        	
+        }
+        
+        System.out.println(foundIt ? "Found it" : "No found");
+        
+        //reviews
+//        int aNumber = 3;
+//        if(aNumber == 0)
+//        	System.out.println("First string");
+//        else System.out.println("second string");
+//        System.out.println("third string");
+//        int aNumber = 3;
+//        if(aNumber == 0)
+//        	System.out.println("First string");
+//        else
+//        	System.out.println("second string");
+//        
+//        System.out.println("third string");
+        int aNumber = 3;
 
+        if(aNumber == 0) {
+        	System.out.println("First string");
+        }
+        else {
+        	System.out.println("second string");
+        }
+        System.out.println("third string");
+	
+		
+	}
 }
