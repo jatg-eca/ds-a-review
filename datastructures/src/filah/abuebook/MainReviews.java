@@ -93,6 +93,28 @@ public class MainReviews {
 			System.out.println(number);
 		}
 		
+		int [] arrayNumTwo = {123, 1240, 44, 32, 99, 156, 48};
+		for(int number : arrayNumTwo) {
+			if(number == 1000) {
+				System.out.println("Se encontró numero " + number);
+				break;
+			}
+		}
+		
+		int [] [] arrayOfInts = 
+			{{1, 33, 44, 36}, {2, 34, 45, 37}, {3, 35, 46, 38}};
+		int searchFor = 45;
+		plan:
+		for(int[] array : arrayOfInts) {
+//			System.out.println(java.util.Arrays.toString(array));
+			System.out.println("sigue");
+			for(int number : array) {
+				System.out.println(number);
+				if(number == searchFor) break plan;
+			}
+		}
+		System.out.println("Ya se acabó el número");
+		
 	}
 	
 
